@@ -262,6 +262,29 @@ Melakukan edit file /etc/dhcp/dchpd.conf seperti pada gambar berikut:
 
 Kemudian melakukan restart bind dengan perintah ‘service bind9 restart’
 
+---
+## Soal 7
+### Deskripsi Soal
+Luffy dan Zoro berencana menjadikan Skypie sebagai server untuk jual beli kapal yang dimilikinya dengan alamat IP yang tetap dengan IP [prefix IP].3.69.
+
+### Jawaban
+### Pada Jipangu
+Melakukan edit file /etc/dhcp/dchpd.conf seperti pada gambar berikut:
+
+![pasted image 0 (21)](https://user-images.githubusercontent.com/63065991/141413862-3f26e8f2-3a3b-4850-8c5b-e9a591f8c080.png)
+
+Selanjutnya melakukan restart dhcp-server dengan perintah ‘service isc-dhcp-server restart’
+
+### Pada Skypie
+Melakukan konfigurasi dengan mengedit file ‘/etc/network/interfaces’ seperti pada gambar berikut
+
+![pasted image 0 (22)](https://user-images.githubusercontent.com/63065991/141413891-ad147c62-ccb0-4e94-98fa-e0d3640554b1.png)
+
+Selanjutnya melakukan restart Skypie dengan klik stop dan start pada node.
+Melakukan uji ip dan nameserver dengan perintah ‘ip a’ maka akan menghasilkan seperti berikut
+
+![pasted image 0 (23)](https://user-images.githubusercontent.com/63065991/141413908-a139066f-ce5d-4cbc-88b0-d6d03d653398.png)
+
 ## Kendala
 - Soal 11 : 
 - Soal 12 : 
