@@ -285,6 +285,55 @@ Melakukan uji ip dan nameserver dengan perintah ‘ip a’ maka akan menghasilka
 
 ![pasted image 0 (23)](https://user-images.githubusercontent.com/63065991/141413908-a139066f-ce5d-4cbc-88b0-d6d03d653398.png)
 
+## Soal 8
+### Deskripsi Soal
+Pada Loguetown, proxy harus bisa diakses dengan nama jualbelikapal.yyy.com dengan port yang digunakan adalah 5000
+
+### Jawaban
+### Pada Water7
+Melakukan edit pada file squid seperti pada gambar berikut:
+
+![1](https://user-images.githubusercontent.com/34973363/141644862-c4d28e5b-04c2-483f-9bae-9ce8a94bd8c9.png)
+
+### Pada EnniesLobby
+Ip pada ennies lobby untuk jualbelikapal.t15.com itu ke ip Water7 (10.49.2.3):
+
+![2](https://user-images.githubusercontent.com/34973363/141644899-63172ab7-5dea-43bb-82e9-e7855ad1be4f.png)
+
+Restart bind9 nya dengan “service bind9 restart”
+
+## Soal 9
+### Deskripsi Soal
+Agar transaksi jual beli lebih aman dan pengguna website ada dua orang, proxy dipasang autentikasi user proxy dengan enkripsi MD5 dengan dua username, yaitu luffybelikapalyyy dengan password luffy_yyy dan zorobelikapalyyy dengan password zoro_yyy
+
+### Setting Water7
+Pada Water7 install apache2-utils dan juga tambahkan htpasswd
+
+![3](https://user-images.githubusercontent.com/34973363/141644942-eae0be93-da22-4d19-a7b7-9cda3959bb7a.png)
+
+## Soal 10
+### Deskripsi Soal
+Transaksi jual beli tidak dilakukan setiap hari, oleh karena itu akses internet dibatasi hanya dapat diakses setiap hari Senin-Kamis pukul 07.00-11.00 dan setiap hari Selasa-Jum’at pukul 17.00-03.00 keesokan harinya (sampai Sabtu pukul 03.00)
+
+### Setting Water
+Pada Water7 di setting bagian ACL nya menjadi :
+
+![4](https://user-images.githubusercontent.com/34973363/141644984-ff7cebe7-f65f-4385-8a92-c95af21e3684.png)
+
+Dan masukan pada config squidnya
+
+![5](https://user-images.githubusercontent.com/34973363/141645002-6ab17cf7-be9b-4b58-9648-e381b36ffa26.png)
+
+## Soal 11
+### Deskripsi Soal
+Agar transaksi bisa lebih fokus berjalan, maka dilakukan redirect website agar mudah mengingat website transaksi jual beli kapal. Setiap mengakses google.com, akan diredirect menuju super.franky.yyy.com dengan website yang sama pada soal shift modul 2. Web server super.franky.yyy.com berada pada node Skypie
+
+### Setting pada Water7
+Pada Water7 config squidnya ditambahkan bad_site domain dan deny_info seperti ini:
+
+![6](https://user-images.githubusercontent.com/34973363/141645020-55ebd7a1-09c6-4505-8f4e-61aa2f2e21ea.png)
+
+
 ## Kendala
 - Soal 11 : 
 - Soal 12 : 
